@@ -37,32 +37,32 @@
    </div>
 
      <div id="timesContainer" >
-   
-    <button id="klo11" type="button">klo 11</button> 
+   <button onclick="myFunctionMa11()">Try it</button>
+    <button id="klo11" onclick="myFunctionMa11()" >klo 11</button> 
       <button id="1130" type="button">klo 11.30</button> 
       <button id="12" type="button">klo 12</button> 
       <button id="1230" type="button">klo 12.30</button> 
       <button id="20" type="button">klo 13</button> 
    </div> 
      
-       <div class="ma11">
+       <div id="ma11">
            <p>
         Maanataina klo 11 
            </p> 
      </div>
        <div class="ma1130">
            <p>
-        Maanataina klo 11 
+        Maanataina klo 11.30 
            </p> 
      </div>
        <div class="ma12">
            <p>
-        Maanataina klo 11 
+        Maanataina klo 12
            </p> 
      </div>
        <div class="ma1230">
            <p>
-        Maanataina klo 11 
+        Maanataina klo 12.30
            </p> 
      </div>
        <div class="ma13">
@@ -166,7 +166,32 @@
            </p> 
      </div>
       
+     <script>
+         
+function myFunctionMa11() {
+    var x = document.getElementById("ma11");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+     <script type="text/javascript">
+    var clicks = 0;
+    function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+          function minusClick() {
+        clicks -= 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    </script>
      
+     <button type="button" onClick="onClick()">Attend </button>
+     <button type="button" onClick="minusClick()">Cancel</button>
+    <p>Clicks: <a id="clicks">0</a></p>
      
  </body>
 
